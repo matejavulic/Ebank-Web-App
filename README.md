@@ -7,13 +7,13 @@ This is a web application for online banking with all essential features. It all
 # Details about the project
 From a logical point of view, the system has a 3-tiered REST application architecture. It is a modular client-server architecture that consists of a presentation tier, an application tier and a data tier.
 
-Picture
+![alt text](https://cdn1.imggmi.com/uploads/2019/8/21/5d8296218f0e3dff8f8aa3e4a4115739-full.png)
 
 - **Presentation tier**  
 Tier comunicates with other two tiers and holds GUI. It is built with Angular, HTML, CSS, and a TypeScript as a forntend logic. It  communicates with the other tiers through API calls.
 
 - **Application tier**  
-Handles application logic. it consists of two separate servers, Node.js server (written in JavaScript) and a Django server (written in Python). Their primary purpose is to support the application’s core functions and fetch/post user data from databases throughtout database server calls. 
+Handles application logic. It consists of two separate servers, Node.js server (written in JavaScript) and a Django server (written in Python). Their primary purpose is to support the application’s core functions and fetch/post user data from databases throughtout database server calls. 
 
 - **Data tier**  
 Stores user related information. The data tier consists of a two database servers:
