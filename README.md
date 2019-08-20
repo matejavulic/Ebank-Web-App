@@ -4,6 +4,28 @@
 # Ebank-Web-App
 This is a web application for online banking with all essential features. It allows registered users to manage their bank accounts, transfer funds, get a list of all past transactions, as well as to pay their utility bills.  
 
+# Details about the project
+From a logical point of view, the system has a 3-tiered REST application architecture. It is a modular client-server architecture that consists of a presentation tier, an application tier and a data tier.
+
+Picture
+
+- **Presentation tier**  
+Tier comunicates with other two tiers and holds GUI. It is built with Angular, HTML, CSS, and a TypeScript as a forntend logic. It  communicates with the other tiers through API calls.
+
+- **Application tier**  
+Handles application logic. it consists of two separate servers, Node.js server (written in JavaScript) and a Django server (written in Python). Their primary purpose is to support the application’s core functions and fetch/post user data from databases throughtout database server calls. 
+
+- **Data tier**  
+Stores user related information. The data tier consists of a two database servers:
+    - MongoDB server and its database, as far as Robo 3T DBMS
+    - MySQL server and corresponding database, as far as MySQL DBMS  
+
+   MongoDB databse is, due to its non relational nature, used for storing user access credentials, refference to a user bank account number and other user-centered information.
+   
+   MySQL database is used to store users bank account details and all related transaction details. 
+
+
+
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
 
@@ -45,6 +67,4 @@ In order to run a Django server, do the following:
 - Change working directory to `cd \server-python\env\pythonserver`
 - Start a server with `python manage.py runserver 3002`
 - To check if server works, head to http://127.0.0.1:3002/randomUserData/.
-
-# Details about the project
 
