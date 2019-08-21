@@ -139,16 +139,50 @@ Database holds data related to a user account and user transactios. User transac
 - Real-world database
   This databse is developed according to several international standards used in IT banking systems:  
   
-  - ISO 20022 Financial Services - Universal financial industry message scheme
+  - ISO 20022 Financial Services - Universal financial industry message scheme  
     As a result of guidelines and schemes presented in this standard, following tables were modeled:  
     
     ![transactionCode](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionCode.PNG)  
     
-  - BAI2 Codes
+    Example:  
+    Suppose we want to list last nine possible transaction codes and its corrensponding names related to Issued Real-Time Credit Transfer payments.  
+    Then, we would form the following SQL query:  
+    
+        `SELECT 
+            PK_transaction_code_id,
+            FK_transaction_domain_id,
+            domain_code, domain_name,
+            family_code, family_name,
+            subfamily_code,
+            subfamily_name
+    
+         FROM
+            ref_transaction_code,
+            ref_transaction_domain,
+            ref_transaction_family,
+            ref_transaction_subfamily
+    
+         WHERE
+            domain_code = "PMNT" &&
+            family_code = "IRCT" &&
+            FK_transaction_domain_id = PK_transaction_domain_id &&
+            FK_transaction_family_id = PK_transaction_family_id &&
+            FK_transaction_subfamily_id = PK_transaction_subfamily_id
+    
+         ORDER BY subfamily_code DESC
+    
+         LIMIT 9`
+    
+    and would get the next query result:  
+    
+    ![queryRes](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionCodes.PNG)  
+    
+  - BAI2 Codes  
     ISO 20022 suggests using the BAI code appended to transaction code. So, the following table is created and together with
     transaction coded table uniquely identifies transaction type:  
     
     ![transactionType](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionType.PNG)
+ 
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
 
