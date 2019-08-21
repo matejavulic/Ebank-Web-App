@@ -68,11 +68,11 @@ Stores user related information. The data tier consists of a two database server
    - Symmetry
    - Closure  
    
-     Example of closure and similarity principles:  
+     Example of the closure and similarity principles:  
    
      ![Gestalt](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/gestalt1.PNG)  
    
-     Example of symmetry principle:  
+     Example of the symmetry principle:  
    
      ![Gestalt2](https://github.com/matejavulic/Ebank-Web-App/blob/master/pictures/gestalt2.PNG)
     
@@ -137,7 +137,7 @@ Database holds data related to a user account and user transactios. User transac
   ![mySql](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/mysql1.png)  
 
 - Real-world database
-  This databse is developed according to several international standards used in IT banking systems:  
+  This databse has been developed according to the several international standards used in an IT banking systems:  
   
   - ISO 20022 Financial Services - Universal financial industry message scheme  
     As a result of guidelines and schemes presented in this standard, following tables were modeled:  
@@ -145,7 +145,7 @@ Database holds data related to a user account and user transactios. User transac
     ![transactionCode](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionCode.PNG)  
     
     Example:  
-    Suppose we want to list last nine possible transaction codes and its corrensponding names related to Issued Real-Time Credit Transfer payments.  
+    Suppose we want to list last nine possible transaction codes and its corrensponding names related to Issued Real-Time Credit Transfer payments (as defined in ISO 20022).  
     Then, we would form the following SQL query:  
     
         `SELECT 
