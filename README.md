@@ -136,11 +136,19 @@ Database holds data related to a user account and user transactios. User transac
   At the moment, this database is used only for testing purposes. It has 4 tables and it is also connected with MongoDB through foreign   key field clientID. 
   ![mySql](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/mysql1.png)  
 
-- Realworld database
-  This databse is developed according to several international standards used in IT banking systems:
+- Real-world database
+  This databse is developed according to several international standards used in IT banking systems:  
+  
   - ISO 20022 Financial Services - Universal financial industry message scheme
-    As a result of guidelines and schemes presented in this standard following tables were modeled:
+    As a result of guidelines and schemes presented in this standard, following tables were modeled:  
     
+    ![transactionCode](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionCode.PNG)  
+    
+  - BAI2 Codes
+    ISO 20022 suggests using the BAI code appended to transaction code. So, the following table is created and together with
+    transaction coded table uniquely identifies transaction type:  
+    
+    ![transactionType](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionType.PNG)
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
 
