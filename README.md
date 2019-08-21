@@ -57,7 +57,7 @@ Stores user related information. The data tier consists of a two database server
   - 6: Recognition rather than recall  
   *Minimize the user's memory load by making objects, actions, and options visible.*  
 
-    Stylized door icon can be a good replacement for Sing Out label:  
+    Stylized door icon can be a good replacement for Sign Out label:  
     
     ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/recognize.PNG) 
    
