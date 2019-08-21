@@ -67,13 +67,13 @@ Stores user related information. The data tier consists of a two database server
    - Similarity
    - Symmetry
    - Closure  
-   Example of closure and similarity principles:  
+     Example of closure and similarity principles:  
    
-    ![Gestalt](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/gestalt1.PNG)  
+     ![Gestalt](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/gestalt1.PNG)  
    
-   Example of symetry principle:  
+     Example of symetry principle:  
    
-    ![Gestalt2](https://github.com/matejavulic/Ebank-Web-App/blob/master/pictures/gestalt2.PNG)
+     ![Gestalt2](https://github.com/matejavulic/Ebank-Web-App/blob/master/pictures/gestalt2.PNG)
     
   - 8: Aesthetic and minimalist design  
   *Dialogues should not contain information which is irrelevant or rarely needed. Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility*.
