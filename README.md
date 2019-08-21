@@ -46,29 +46,29 @@ Stores user related information. The data tier consists of a two database server
   - 3: User control and freedom  
 
   - 4: Consistency and standards  
-*Users should not have to wonder whether different words, situations, or actions mean the same thing.*  
+  *Users should not have to wonder whether different words, situations, or actions mean the same thing.*  
 
-During frontend develpoment, [Google Material Design](https://material.io/design/introduction/#principles) principles were followed.
+    During frontend develpoment, [Google Material Design](https://material.io/design/introduction/#principles) principles were followed.
 
   - 5: Error prevention  
   
   - 6: Recognition rather than recall  
-*Minimize the user's memory load by making objects, actions, and options visible.*  
+  *Minimize the user's memory load by making objects, actions, and options visible.*  
 
-Stylized door icon can be a good replacement for Sing Out label:  
+    Stylized door icon can be a good replacement for Sing Out label:  
   ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/recognize.PNG) 
    
   - 7: Flexibility and efficiency of use  
-*Accelerators — unseen by the novice user — may often speed up the interaction for the expert user. Allow users to tailor frequent actions.*
+  *Accelerators — unseen by the novice user — may often speed up the interaction for the expert user. Allow users to tailor frequent  actions.*
 
   - 8: Aesthetic and minimalist design  
-*Dialogues should not contain information which is irrelevant or rarely needed. Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility*.
+  *Dialogues should not contain information which is irrelevant or rarely needed. Every extra unit of information in a dialogue competes with the relevant units of information and diminishes their relative visibility*.
 
   - 9: Help users recognize, diagnose, and recover from errors  
-*Error messages should be expressed in plain language (no codes), precisely indicate the problem, and constructively suggest a solution.*
+  *Error messages should be expressed in plain language (no codes), precisely indicate the problem, and constructively suggest a solution.*
 
  - 10: Help and documentation  
-*Even though it is better if the system can be used without documentation, it may be necessary to provide help and documentation. Any such information should be easy to search, focused on the user's task, list concrete steps to be carried out, and not be too large.*
+ *Even though it is better if the system can be used without documentation, it may be necessary to provide help and documentation. Any such information should be easy to search, focused on the user's task, list concrete steps to be carried out, and not be too large.*
 
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
