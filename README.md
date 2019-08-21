@@ -5,8 +5,8 @@
 # Ebank-Web-App
 This is a web application for online banking with all essential features. It allows registered users to manage their bank accounts, transfer funds, get a list of all past transactions, as well as to pay their utility bills.  
 
-# Project Details
-## Logical Structure
+# Project details
+## Logical structure
 From a logical point of view, the system has a 3-tiered REST application architecture. It is a modular client-server architecture that consists of a presentation tier, an application tier and a data tier.
 
 ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/threetierrest2.png)
@@ -108,34 +108,38 @@ Stores user related information. The data tier consists of a two database server
 ## Application tier
 ### Node.js server
 This is the main application server. It communicates with database and Django servers through API server calls.
+
 Server is capable of executing following tasks:
- - Sign Up/ Sign In user
+ - User Sign Up/ Sign In
  - Tokenization service (auto authentication if user reloads or closes web page, auth check for guarded routes)
  - 
  - Get all user information from databases (make queries to dabases)
  - Format and prepare data in convenient format to be shown on frontend
 ### Django server
 This is the server with a two implemented API services:
- - Dummy data service
-   When a new user signs up, this service sends random JSON object to Node.js server. JSON object contains random data (mobile phone number, branch name, home address, 
- - Exchange rates service
+ - Dummy data service  
+   When a new user signs up, this service sends random JSON object to Node.js server. JSON object contains random data (mobile phone number, branch name, and home address) pulled out of .csv file (or as a random number in case of phone number) on Django server. After receiving of a data, Node.js server updates corrensponing user data in MongoDB with the data provided.
+ - Exchange rates service  
+    This service sends API calls to the free [Exchange rates API](https://api.exchangeratesapi.io/), formats retreived data and sends back data to Node.js server.  
  
-
-## Data Tier
+## Data tier
 ### MongoDB database
+Database holds a data related to user account and user transactios. User transactions are stored only temprarily in this databse (such data should be held in relational database). In the further development they will be shifted to MySQL Database. Here is the model of database:
+
 ### MySQL database
+At the moment, this is the simple 
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 # Servers
-## Frontend Development Server
+## Frontend development server setup 
 Run `ng serve` to start a development server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-## Backend Servers Setup
-### Node Server
+## Backend servers setup
+### Node server
 Run `npm run start:server` to start a Node.js server.
-### MongoDB Server
+### MongoDB server
 Download and install:  
 - MongoDB Community Server 4.2.0 from its [official website](https://www.mongodb.com/download-center/community)
 - Robo 3T DBMS software from its [official website](https://robomongo.org/)  
@@ -144,13 +148,13 @@ Run `mongod` to start a MongoDB database server. Make sure you have added **mong
 If everything goes well you should see following message in CLI:  
 `I NETWORK  [initandlisten] waiting for connections on port 27017`
 
-### MySQL Server
+### MySQL server
 Download MySQL Installer from its [official website](https://dev.mysql.com/downloads/installer/) and install:
 - MySQL Community Server 8.0.17
 - MySQL Workbench 8.0.17.  
 If everything goes without errors, MySQL server daemon should be automaticly started.
 
-### Django Server
+### Django server
 Download and install:  
 - Python 3.7.4 from its [official website](https://www.python.org/downloads/)
 - Django framework with `pip install Django==2.2.4`
