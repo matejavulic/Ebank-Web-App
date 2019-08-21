@@ -31,24 +31,31 @@ Stores user related information. The data tier consists of a two database server
 - Frontend design principles  
   User interface design was conducted according to the usability guidlines given in [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/) by Jacob Nielsen. It recommends following heuristcis for UI design:
   - 1: Visibility of system status  
-    *The system should always keep users informed about what is going on, through appropriate feedback within reasonable time.*
+    *The system should always keep users informed about what is going on, through appropriate feedback within reasonable time.*  
+    
     Examples (left picture - Sign In visibility status, right picture - Recent Transactions visibility status):   
     ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/fetch.PNG)
     ![REST](https://github.com/matejavulic/Ebank-Web-App/blob/master/pictures/fetching%202.PNG)
 
   - 2: Match between system and the real world  
-     *The system should speak the users' language, with words, phrases and concepts familiar to the user.* One way to accomplish this    requirement is to use methapore to symbolicly represent apstarct idea of real world expirience. For example, opposite arrows icon can be a good real life metaphore for banking transactions:
+     *The system should speak the users' language, with words, phrases and concepts familiar to the user.*  
+     
+     One way to accomplish this requirement is to use methapore to symbolicly represent apstarct idea of real world expirience. For example, opposite arrows icon can be a good real life metaphore for banking transactions:
      ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/methaphore.PNG)
      
   - 3: User control and freedom  
 
   - 4: Consistency and standards  
-*Users should not have to wonder whether different words, situations, or actions mean the same thing.* During frontend develpoment, [Google Material Design](https://material.io/design/introduction/#principles) principles were followed.
+*Users should not have to wonder whether different words, situations, or actions mean the same thing.*  
+
+During frontend develpoment, [Google Material Design](https://material.io/design/introduction/#principles) principles were followed.
 
   - 5: Error prevention  
   
   - 6: Recognition rather than recall  
-*Minimize the user's memory load by making objects, actions, and options visible.* Stylized door icon can be a good replacement for Sing Out label:  
+*Minimize the user's memory load by making objects, actions, and options visible.*  
+
+Stylized door icon can be a good replacement for Sing Out label:  
   ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/recognize.PNG) 
    
   - 7: Flexibility and efficiency of use  
