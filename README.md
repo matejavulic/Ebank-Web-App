@@ -142,7 +142,7 @@ Database holds data related to a user account and user transactios. User transac
   - ISO 20022 Financial Services - Universal financial industry message scheme  
     As a result of guidelines and schemes presented in this standard, following tables were modeled:  
     
-    ![transactionCode](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionCode.PNG)  
+    ![transactionCode](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactnCode.PNG)  
     
     Example:  
     Suppose we want to list last nine possible transaction codes and its corrensponding names related to Issued Real-Time Credit Transfer payments (as defined in ISO 20022).  
