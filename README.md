@@ -1,5 +1,6 @@
 # Disclaimer
 ***This project and its source code should be used for educational purposes only.***
+***A fictional names "Ebank", "E-bank", "Ebanka", "E-banka" as far as fictional bank logos have been used only for representative purposes.***
 
 # Ebank-Web-App
 This is a web application for online banking with all essential features. It allows registered users to manage their bank accounts, transfer funds, get a list of all past transactions, as well as to pay their utility bills.  
@@ -30,11 +31,15 @@ Stores user related information. The data tier consists of a two database server
 - Frontend design principles  
   User interface design was conducted according to the usability guidlines given in [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/) by Jacob Nielsen. It recommends following heuristcis for UI design:
   - 1: Visibility of system status  
-The system should always keep users informed about what is going on, through appropriate feedback within reasonable time.
+    The system should always keep users informed about what is going on, through appropriate feedback within reasonable time.
+    Examples (left picture - Sign In visibility status, right picture - Recent Transactions visibility status):   
+    ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/fetch.PNG)
+    ![REST](https://github.com/matejavulic/Ebank-Web-App/blob/master/pictures/fetching%202.PNG)
 
   - 2: Match between system and the real world  
-     The system should speak the users' language, with words, phrases and concepts familiar to the user, rather than system-oriented terms. Follow real-world conventions, making information appear in a natural and logical order.
-
+     The system should speak the users' language, with words, phrases and concepts familiar to the user. One way to accomplish this requirement is to use methapore to symbolicly represent apstarct idea of real world expirience. For example, opposite arrows icon can be a good real life metaphore for banking transactions:
+     ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/methaphore.PNG)
+     
   - 3: User control and freedom  
 Users often choose system functions by mistake and will need a clearly marked "emergency exit" to leave the unwanted state without having to go through an extended dialogue. Support undo and redo.
 
