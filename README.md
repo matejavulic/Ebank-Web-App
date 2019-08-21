@@ -1,6 +1,6 @@
 # Disclaimer
 ***This project and its source code should be used for educational purposes only.***
-***A fictional names "Ebank", "E-bank", "Ebanka", "E-banka" as far as fictional bank logos have been used only for representative purposes.***
+***A fictional names "Ebank", "E-bank", "Ebanka", "E-banka" as far as fictional bank logos have been used for illustration purpose only.***
 
 # Ebank-Web-App
 This is a web application for online banking with all essential features. It allows registered users to manage their bank accounts, transfer funds, get a list of all past transactions, as well as to pay their utility bills.  
@@ -28,7 +28,7 @@ Stores user related information. The data tier consists of a two database server
 
 ## Presentation tier
 ### Frontend
-- Frontend design principles  
+- **Design principles**  
   User interface design was conducted according to the usability guidlines given in [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/) by Jacob Nielsen. It recommends following heuristcis for UI design:
   - 1: Visibility of system status  
     *The system should always keep users informed about what is going on, through appropriate feedback within reasonable time.*  
@@ -81,9 +81,21 @@ Stores user related information. The data tier consists of a two database server
   - 9: Help users recognize, diagnose, and recover from errors  
   *Error messages should be expressed in plain language (no codes), precisely indicate the problem, and constructively suggest a solution.*
 
- - 10: Help and documentation  
- *Even though it is better if the system can be used without documentation, it may be necessary to provide help and documentation. Any such information should be easy to search, focused on the user's task, list concrete steps to be carried out, and not be too large.*
-
+  - 10: Help and documentation  
+  *Even though it is better if the system can be used without documentation, it may be necessary to provide help and documentation. Any such information should be easy to search and focused on the user's task.*  
+   Help section is mainly focused on a video help instructions, because they are:  
+     - easy to understand
+     - short 
+     - easily seen
+     - contain minimum amount of task specific information  
+     
+- **Component organisation and architecture**  
+  Each Angular frontend component consists of three files:
+   - HTML template
+   - CSS template
+   - Typescript controller  
+  Typescript controller's task is to store all variables relevant for component HTML part as far as functions to make calls
+  for Service controllers (service controllers are typescript modules wich initiate API server calls).  
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
 
