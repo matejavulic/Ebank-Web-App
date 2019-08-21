@@ -12,7 +12,7 @@ From a logical point of view, the system has a 3-tiered REST application archite
 ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/threetierrest2.png)
 
 - **Presentation tier**  
-Tier comunicates with other two tiers and holds GUI. It is built with Angular, HTML, CSS, and a TypeScript as a forntend logic. It  communicates with the other tiers through API calls.
+Comunicates with other two tiers and holds GUI. It is built with Angular, HTML, CSS, and a TypeScript as a forntend logic. Communication with the other tiers is established through API calls.
 
 - **Application tier**  
 Handles application logic. It consists of two separate servers, Node.js server (written in JavaScript) and a Django server (written in Python). Their primary purpose is to support the application’s core functions and fetch/post user data from databases throughtout database server calls. 
@@ -67,6 +67,7 @@ Stores user related information. The data tier consists of a two database server
    - Similarity
    - Symmetry
    - Closure  
+   
      Example of closure and similarity principles:  
    
      ![Gestalt](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/gestalt1.PNG)  
@@ -93,9 +94,10 @@ Stores user related information. The data tier consists of a two database server
   Each Angular frontend component consists of three files:
    - HTML template
    - CSS template
-   - Typescript controller  
-  Typescript controller's task is to store all variables relevant for component HTML part as far as functions to make calls
-  for Service controllers (service controllers are typescript modules wich initiate API server calls).  
+   - TypeScript controller  
+   
+  TypeScript controller's task is to store all variables relevant for component HTML part as far as functions to make calls
+  for service controllers (service controllers are TypeScript modules wich initiate API server calls).  
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
 
