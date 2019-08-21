@@ -110,24 +110,37 @@ Stores user related information. The data tier consists of a two database server
 This is the main application server. It communicates with database and Django servers through API server calls.
 
 Server is capable of executing following tasks:
- - User Sign Up/ Sign In
- - Tokenization service (auto authentication if user reloads or closes web page, auth check for guarded routes)
- - 
- - Get all user information from databases (make queries to dabases)
- - Format and prepare data in convenient format to be shown on frontend
+ - User Sign Up/Sign In
+ - Tokenization service (auto authentication if user authenticated user close or reloads web page, auto user sign out after token expiration)
+ - Handling HTTP PUT, POST and GET requests
+ - Getting all user information from databases (make database queries)
+ - MIME type validation and image upload handling
+ - Formating and preparing data in convenient format to be shown on frontend
+ - Creating, editing and deleting of user transactions
+ 
 ### Django server
-This is the server with a two implemented API services:
+This server has two implemented API services:
  - Dummy data service  
-   When a new user signs up, this service sends random JSON object to Node.js server. JSON object contains random data (mobile phone number, branch name, and home address) pulled out of .csv file (or as a random number in case of phone number) on Django server. After receiving of a data, Node.js server updates corrensponing user data in MongoDB with the data provided.
+   When a new user signs up, this service sends random JSON object to Node.js sever upon request. JSON object contains random data (mobile phone number, branch name, and home address) pulled out of .csv file (or as a random number in case of phone number) on Django server. After data receiving, Node.js server updates corrensponing user data in MongoDB with the data provided.
  - Exchange rates service  
-    This service sends API calls to the free [Exchange rates API](https://api.exchangeratesapi.io/), formats retreived data and sends back data to Node.js server.  
+    This service sends API calls to the free [Exchange rates API](https://api.exchangeratesapi.io/), formats retreived data and sends it back to the Node.js server.  
  
 ## Data tier
 ### MongoDB database
-Database holds a data related to user account and user transactios. User transactions are stored only temprarily in this databse (such data should be held in relational database). In the further development they will be shifted to MySQL Database. Here is the model of database:
+Database holds data related to a user account and user transactios. User transactions are stored only temporarily in this databse (such data should be held in relational database). Also, it is connected with 1-1 relation through foreign key (bankAccount filed) with MySQL table account (private key accountID). In the further development it will be shifted to a MySQL Database, and will be connected through _ id field with customerID table in MySQL. Here is the model of database:  
+
+ ![mongoDB](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/mongodb.png)
 
 ### MySQL database
-At the moment, this is the simple 
+- Testing database
+  At the moment, this database is used only for testing purposes. It has 4 tables and it is also connected with MongoDB through foreign   key field clientID. 
+  ![mySql](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/mysql1.png)  
+
+- Realworld database
+  This databse is developed according to several international standards used in IT banking systems:
+  - ISO 20022 Financial Services - Universal financial industry message scheme
+    As a result of guidelines and schemes presented in this standard following tables were modeled:
+    
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
 
