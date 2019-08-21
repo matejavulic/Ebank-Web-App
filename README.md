@@ -177,11 +177,14 @@ Database holds data related to a user account and user transactios. User transac
     
     ![queryRes](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionCodes.PNG)  
     
-  - BAI2 Codes  
-    ISO 20022 suggests using the BAI code appended to transaction code. So, the following table is created and together with
-    transaction coded table uniquely identifies transaction type:  
+  - BAI2 codes  
+    ISO 20022 suggests using the BAI code appended to the transaction code. So, the following table is created, and together with
+    transaction code table uniquely identifies transaction type:  
     
-    ![transactionType](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionType.PNG)
+    ![transactionType](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionType.PNG)  
+    
+  - ISO 18245:2003 Retail financial services - Merchant category codes (MCC)
+    This standard was used for modelinh the merchant category table. This table stores MCC codes upon wich all electronic payments (with card) are standardized and categorized by asset 
  
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
