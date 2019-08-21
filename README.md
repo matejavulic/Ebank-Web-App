@@ -72,7 +72,7 @@ Stores user related information. The data tier consists of a two database server
    
      ![Gestalt](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/gestalt1.PNG)  
    
-     Example of symetry principle:  
+     Example of symmetry principle:  
    
      ![Gestalt2](https://github.com/matejavulic/Ebank-Web-App/blob/master/pictures/gestalt2.PNG)
     
@@ -85,10 +85,10 @@ Stores user related information. The data tier consists of a two database server
   - 10: Help and documentation  
   *Even though it is better if the system can be used without documentation, it may be necessary to provide help and documentation. Any such information should be easy to search and focused on the user's task.*  
    Help section is mainly focused on a video help instructions, because they are:  
-     - easy to understand
-     - short 
-     - easily seen
-     - contain minimum amount of task specific information  
+     - Easy to understand
+     - Short 
+     - Easily seen
+     - Contain minimum amount of task specific information  
      
 - **Component organisation and architecture**  
   Each Angular frontend component consists of three files:
@@ -97,7 +97,33 @@ Stores user related information. The data tier consists of a two database server
    - TypeScript controller  
    
   TypeScript controller's task is to store all variables relevant for component HTML part as far as functions to make calls
-  for service controllers (service controllers are TypeScript modules wich initiate API server calls).  
+  for service controllers (service controllers are TypeScript modules wich initiate API server calls).
+- **Services**
+  - Authentication service
+  - Dashboard service
+  - Posts service
+  - Auth guard
+  - Auth interceptor
+  
+## Application tier
+### Node.js server
+This is the main application server. It communicates with database and Django servers through API server calls.
+Server is capable of executing following tasks:
+ - Sign Up/ Sign In user
+ - Tokenization service (auto authentication if user reloads or closes web page, auth check for guarded routes)
+ - 
+ - Get all user information from databases (make queries to dabases)
+ - Format and prepare data in convenient format to be shown on frontend
+### Django server
+This is the server with a two implemented API services:
+ - Dummy data service
+   When a new user signs up, this service sends random JSON object to Node.js server. JSON object contains random data (mobile phone number, branch name, home address, 
+ - Exchange rates service
+ 
+
+## Data Tier
+### MongoDB database
+### MySQL database
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
 
