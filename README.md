@@ -308,4 +308,4 @@ In order to run a Django server, do the following:
     - QR code payments
     
 # Contact
-If you have any questions, feel free to write me at matejavulic@gmail.com .
+If you have any questions, feel free to write me an e-mail at matejavulic@gmail.com .
