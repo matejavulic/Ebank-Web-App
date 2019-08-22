@@ -306,3 +306,6 @@ In order to run a Django server, do the following:
     - Mobile device token
     - Fingerprint biometric authentication
     - QR code payments
+    
+# Contact
+If you have any questions, feel free to write me at matejavulic@gmail.com .
