@@ -186,8 +186,16 @@ Database holds data related to a user account and user transactios. User transac
   - ISO 18245:2003 Retail financial services - Merchant category codes (MCC)  
     This standard was used for the merchant category table modeling. This table stores MCC codes upon wich all electronic payments (with card) are standardized and categorized.  
     
-     ![mcc](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/Merchant.PNG) 
- 
+     ![mcc](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/Merchant.PNG)  
+     
+   - ISO 3166-1 alpha-3 - Three-letter country codes   
+   
+      ![alpha3](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/Country%20code.PNG)  
+      
+   - ISO 4217 - This standar delineates currency designators, country codes (alpha and numeric), and references to minor units.
+     It was used for the currency codes table.
+   
+      ![alpha3](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/Currency.PNG)
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
 
