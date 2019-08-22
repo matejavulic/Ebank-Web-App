@@ -50,7 +50,7 @@ This is a web application for online banking with all essential features. It all
   
   ![pay4](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/payment4.PNG)  
   
-- Drop down menu  
+- Drop-down menu  
 
   ![ddmenu](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/sedemenu.PNG)  
   
@@ -66,7 +66,7 @@ From a logical point of view, the system has a 3-tiered REST application archite
 ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/threetierrest2.png)
 
 - **Presentation tier**  
-Communicates with other two tiers and holds GUI. It is built with Angular, HTML, CSS, and a TypeScript as a front end logic. Communication with the other tiers is established through API calls.
+Communicates with other two tiers and holds GUI. It is built with Angular, HTML, CSS, and a TypeScript as a front-end logic. Communication with the other tiers is established through API calls.
 
 - **Application tier**  
 Handles application logic. It consists of two separate servers, Node.js server (written in JavaScript) and a Django server (written in Python). Their primary purpose is to support the application’s core functions and fetch/post user data from databases throughout database server calls. 
@@ -76,12 +76,12 @@ Stores user related information. The data tier consists of a two database server
     - MongoDB server and its database, as far as Robo 3T DBMS
     - MySQL server and corresponding database, as far as MySQL DBMS  
 
-   MongoDB database is, due to its non relational nature, used for storing user access credentials, reference to a user bank account number and other user-centered information.
+   MongoDB database is, due to its non-relational nature, used for storing user access credentials, reference to a user bank account number and other user-centered information.
    
    MySQL database is used to store users bank account details and all related transaction details. 
 
 ## Presentation tier
-### Front end
+### Front-end
 - **Design principles**  
   User interface design was conducted according to the usability guidelines given in [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/) by Jacob Nielsen. It recommends following heuristics for UI design:
   - 1: Visibility of system status  
@@ -95,7 +95,7 @@ Stores user related information. The data tier consists of a two database server
   - 2: Match between system and the real world  
      *The system should speak the users' language, with words, phrases and concepts familiar to the user.*  
      
-     One way to accomplish this requirement is to use metaphor to symbolically represent abstract idea of real world experience. For example, opposite arrows icon can be a good real life metaphor for banking transactions:  
+     One way to accomplish this requirement is to use metaphor to symbolically represent abstract idea of a real world experience. For example, opposite arrows icon can be a good real life metaphor for banking transactions:  
      
       ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/methaphore.PNG)
      
@@ -104,14 +104,14 @@ Stores user related information. The data tier consists of a two database server
   - 4: Consistency and standards  
   *Users should not have to wonder whether different words, situations, or actions mean the same thing.*  
 
-    During front end development, [Google Material Design](https://material.io/design/introduction/#principles) principles were followed.
+    During front-end development, [Google Material Design](https://material.io/design/introduction/#principles) principles were followed.
 
   - 5: Error prevention  
   
   - 6: Recognition rather than recall  
   *Minimize the user's memory load by making objects, actions, and options visible.*  
 
-    Stylized door icon can be a good replacement for Sign Out label:  
+    Stylized door icon can be a good replacement for *Sign out* label:  
     
     ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/recognize.PNG) 
    
@@ -145,7 +145,7 @@ Stores user related information. The data tier consists of a two database server
      - Contain minimum amount of task specific information  
      
 - **Component organisation and architecture**  
-  Each Angular front end component consists of three files:
+  Each Angular front-end component consists of three files:
    - HTML template
    - CSS template
    - TypeScript controller  
@@ -261,9 +261,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 # Servers
-## Front end development server setup 
+## Front-end development server setup 
 Run `ng serve` to start a development server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-## Backend servers setup
+## Back-end servers setup
 ### Node server
 Run `npm run start:server` to start a Node.js server.
 ### MongoDB server
@@ -297,3 +297,12 @@ In order to run a Django server, do the following:
 - Start a server with `python manage.py runserver 3002`
 - To check if server works, head to http://127.0.0.1:3002/randomUserData/.
 
+#Further development
+
+##Front-end
+  - Adding user abbility to get an graphical report on statistics of its bank account with [plotly](https://plot.ly/) 
+##Back-end
+  - Adding two new types if web app authentication:  
+    - Mobile device token
+    - Fingerptint biometric authentication
+    - QR code payments
