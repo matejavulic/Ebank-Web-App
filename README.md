@@ -12,7 +12,7 @@ From a logical point of view, the system has a 3-tiered REST application archite
 ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/threetierrest2.png)
 
 - **Presentation tier**  
-Comunicates with other two tiers and holds GUI. It is built with Angular, HTML, CSS, and a TypeScript as a forntend logic. Communication with the other tiers is established through API calls.
+Comunicates with other two tiers and holds GUI. It is built with Angular, HTML, CSS, and a TypeScript as a front end logic. Communication with the other tiers is established through API calls.
 
 - **Application tier**  
 Handles application logic. It consists of two separate servers, Node.js server (written in JavaScript) and a Django server (written in Python). Their primary purpose is to support the application’s core functions and fetch/post user data from databases throughtout database server calls. 
@@ -27,7 +27,7 @@ Stores user related information. The data tier consists of a two database server
    MySQL database is used to store users bank account details and all related transaction details. 
 
 ## Presentation tier
-### Frontend
+### Front end
 - **Design principles**  
   User interface design was conducted according to the usability guidlines given in [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/) by Jacob Nielsen. It recommends following heuristcis for UI design:
   - 1: Visibility of system status  
@@ -50,7 +50,7 @@ Stores user related information. The data tier consists of a two database server
   - 4: Consistency and standards  
   *Users should not have to wonder whether different words, situations, or actions mean the same thing.*  
 
-    During frontend develpoment, [Google Material Design](https://material.io/design/introduction/#principles) principles were followed.
+    During front end develpoment, [Google Material Design](https://material.io/design/introduction/#principles) principles were followed.
 
   - 5: Error prevention  
   
@@ -91,7 +91,7 @@ Stores user related information. The data tier consists of a two database server
      - Contain minimum amount of task specific information  
      
 - **Component organisation and architecture**  
-  Each Angular frontend component consists of three files:
+  Each Angular front end component consists of three files:
    - HTML template
    - CSS template
    - TypeScript controller  
@@ -115,7 +115,7 @@ Server is capable of executing following tasks:
  - Handling HTTP PUT, POST and GET requests
  - Getting all user information from databases (make database queries)
  - MIME type validation and image upload handling
- - Formating and preparing data in convenient format to be shown on frontend
+ - Formating and preparing data in convenient format to be shown on front end
  - Creating, editing and deleting of user transactions
  
 ### Django server
@@ -207,7 +207,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 # Servers
-## Frontend development server setup 
+## Front end development server setup 
 Run `ng serve` to start a development server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 ## Backend servers setup
 ### Node server
