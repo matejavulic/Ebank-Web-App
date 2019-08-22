@@ -192,8 +192,8 @@ Database holds data related to a user account and user transactios. User transac
    
       ![alpha3](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/Country%20code.PNG)  
       
-   - ISO 4217 - This standar delineates currency designators, country codes (alpha and numeric), and references to minor units.
-     It was used for the currency codes table.
+   - ISO 4217 - This standard delineates currency designators, country codes (alpha and numeric), and references to minor units.
+     It was used for the creation of currency codes table.
    
       ![alpha3](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/Currency.PNG)
 # Build
