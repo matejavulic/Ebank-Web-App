@@ -66,24 +66,24 @@ From a logical point of view, the system has a 3-tiered REST application archite
 ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/threetierrest2.png)
 
 - **Presentation tier**  
-Comunicates with other two tiers and holds GUI. It is built with Angular, HTML, CSS, and a TypeScript as a front end logic. Communication with the other tiers is established through API calls.
+Communicates with other two tiers and holds GUI. It is built with Angular, HTML, CSS, and a TypeScript as a front end logic. Communication with the other tiers is established through API calls.
 
 - **Application tier**  
-Handles application logic. It consists of two separate servers, Node.js server (written in JavaScript) and a Django server (written in Python). Their primary purpose is to support the application’s core functions and fetch/post user data from databases throughtout database server calls. 
+Handles application logic. It consists of two separate servers, Node.js server (written in JavaScript) and a Django server (written in Python). Their primary purpose is to support the application’s core functions and fetch/post user data from databases throughout database server calls. 
 
 - **Data tier**  
 Stores user related information. The data tier consists of a two database servers:
     - MongoDB server and its database, as far as Robo 3T DBMS
     - MySQL server and corresponding database, as far as MySQL DBMS  
 
-   MongoDB databse is, due to its non relational nature, used for storing user access credentials, reference to a user bank account number and other user-centered information.
+   MongoDB database is, due to its non relational nature, used for storing user access credentials, reference to a user bank account number and other user-centered information.
    
    MySQL database is used to store users bank account details and all related transaction details. 
 
 ## Presentation tier
 ### Front end
 - **Design principles**  
-  User interface design was conducted according to the usability guidlines given in [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/) by Jacob Nielsen. It recommends following heuristcis for UI design:
+  User interface design was conducted according to the usability guidelines given in [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics/) by Jacob Nielsen. It recommends following heuristics for UI design:
   - 1: Visibility of system status  
     *The system should always keep users informed about what is going on, through appropriate feedback within reasonable time.*  
     
@@ -95,7 +95,7 @@ Stores user related information. The data tier consists of a two database server
   - 2: Match between system and the real world  
      *The system should speak the users' language, with words, phrases and concepts familiar to the user.*  
      
-     One way to accomplish this requirement is to use methapore to symbolicly represent apstarct idea of real world expirience. For example, opposite arrows icon can be a good real life metaphore for banking transactions:  
+     One way to accomplish this requirement is to use metaphor to symbolically represent abstract idea of real world experience. For example, opposite arrows icon can be a good real life metaphor for banking transactions:  
      
       ![REST](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/methaphore.PNG)
      
@@ -104,7 +104,7 @@ Stores user related information. The data tier consists of a two database server
   - 4: Consistency and standards  
   *Users should not have to wonder whether different words, situations, or actions mean the same thing.*  
 
-    During front end develpoment, [Google Material Design](https://material.io/design/introduction/#principles) principles were followed.
+    During front end development, [Google Material Design](https://material.io/design/introduction/#principles) principles were followed.
 
   - 5: Error prevention  
   
@@ -151,7 +151,7 @@ Stores user related information. The data tier consists of a two database server
    - TypeScript controller  
    
   TypeScript controller's task is to store all variables relevant for component HTML part as far as functions to make calls
-  for service controllers (service controllers are TypeScript modules wich initiate API server calls).
+  for service controllers (service controllers are TypeScript modules which initiate API server calls).
 - **Services**
   - Authentication service
   - Dashboard service
@@ -169,20 +169,20 @@ Server is capable of executing following tasks:
  - Handling HTTP PUT, POST and GET requests
  - Getting all user information from databases (make database queries)
  - MIME type validation and image upload handling
- - Formating and preparing data in convenient format to be shown on front end
+ - Formatting and preparing data in convenient format to be shown on front end
  - Creating, editing and deleting of user transactions
  
 ### Django server
 This server has two implemented API services:
  - **Dummy data service**  
-   When a new user signs up, this service sends random JSON object to Node.js sever upon request. JSON object contains random data (mobile phone number, branch name, and home address) pulled out of .csv file (or as a random number in case of phone number) on Django server. After data receiving, Node.js server updates corrensponing user data in MongoDB with the data provided.  
+   When a new user signs up, this service sends random JSON object to Node.js sever upon request. JSON object contains random data (mobile phone number, branch name, and home address) pulled out of .csv file (or as a random number in case of phone number) on Django server. After data receiving, Node.js server updates corresponding user data in MongoDB with the data provided.  
    
  - **Exchange rates service**  
-    This service sends API calls to the free [Exchange rates API](https://api.exchangeratesapi.io/), formats retreived data and sends it back to the Node.js server.  
+    This service sends API calls to the free [Exchange rates API](https://api.exchangeratesapi.io/), formats retrieved data and sends it back to the Node.js server.  
  
 ## Data tier
 ### MongoDB database
-Database holds data related to a user account and user transactios. User transactions are stored only temporarily in this databse (such data should be held in relational database). Also, it is connected with 1-1 relation through foreign key (bankAccount filed) with MySQL table account (private key accountID). In the further development it will be shifted to a MySQL Database, and will be connected through _ id field with customerID table in MySQL. Here is the model of database:  
+Database holds data related to a user account and user transactions. User transactions are stored only temporarily in this database (such data should be held in relational database). Also, it is connected with 1-1 relation through foreign key (bankAccount filed) with MySQL table account (private key accountID). In the further development it will be shifted to a MySQL Database, and will be connected through _ id field with customerID table in MySQL. Here is the model of database:  
 
  ![mongoDB](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/mongodb.png)
 
@@ -192,7 +192,7 @@ Database holds data related to a user account and user transactios. User transac
   ![mySql](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/mysql1.png)  
 
 - **Real-world database (work in progress)**  
-  This databse has been developed according to the several international standards used in an IT banking systems:  
+  This database has been developed according to the several international standards used in an IT banking systems:  
   
   - **ISO 20022 Financial Services - Universal financial industry message scheme**  
     As a result of guidelines and schemes presented in this standard, following tables were modeled:  
@@ -200,7 +200,7 @@ Database holds data related to a user account and user transactios. User transac
     ![transactionCode](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactnCode.PNG)  
     
     Example:  
-    Suppose we want to list last nine possible transaction codes and its corrensponding names related to Issued Real-Time Credit Transfer payments (as defined in ISO 20022).  
+    Suppose we want to list last nine possible transaction codes and its corresponding names related to Issued Real-Time Credit Transfer payments (as defined in ISO 20022).  
     Then, we would form the following SQL query:  
     
         `SELECT 
@@ -239,7 +239,7 @@ Database holds data related to a user account and user transactios. User transac
     ![transactionType](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionType.PNG)  
     
   - **ISO 18245:2003 Retail financial services** - Merchant category codes (MCC)  
-    This standard was used for the merchant category table modeling. This table stores MCC codes upon wich all electronic payments (card payments) are standardized and categorized.  
+    This standard was used for the merchant category table modeling. This table stores MCC codes upon which all electronic payments (card payments) are standardized and categorized.  
     
      ![mcc](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/Merchant.PNG)  
      
@@ -279,15 +279,15 @@ If everything goes well you should see following message in CLI:
 Download MySQL Installer from its [official website](https://dev.mysql.com/downloads/installer/) and install:
 - MySQL Community Server 8.0.17
 - MySQL Workbench 8.0.17.  
-If everything goes without errors, MySQL server daemon should be automaticly started.
+If everything goes without errors, MySQL server daemon should be automatically  started.
 
 ### Django server
 Download and install:  
 - Python 3.7.4 from its [official website](https://www.python.org/downloads/)
 - Django framework with `pip install Django==2.2.4`
-- Install virtual enviroment with `pip install virtualenv`
+- Install virtual environment with `pip install virtualenv`
   - Launch virtualenv env in cmd
-  - Start new enviroment `cd your_project virtualenv env`
+  - Start new environment `cd your_project virtualenv env`
   - Activate virtualenv (on Windows) `cd \env\Scripts\activate.bat`
   - Now install following Python libraries:  
     `pip install numpy pandas request`  
