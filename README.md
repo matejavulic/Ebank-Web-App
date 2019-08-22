@@ -297,7 +297,7 @@ In order to run a Django server, do the following:
 - Start a server with `python manage.py runserver 3002`
 - To check if server works, head to http://127.0.0.1:3002/randomUserData/.
 
-#Further development
+# Further development
 
 ## Front-end
   - Adding user ability to get an graphical report on a statistics of its bank account with [plotly](https://plot.ly/). 
