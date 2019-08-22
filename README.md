@@ -5,6 +5,60 @@
 # Ebank-Web-App
 This is a web application for online banking with all essential features. It allows registered users to manage their bank accounts, transfer funds, get a list of all past transactions, as well as to pay their utility bills.  
 
+# User interface pictures
+- Sign Up page  
+
+  ![signup](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/signup.PNG)  
+  
+- Log in page  
+
+  ![login1](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/login1.PNG)  
+  
+- Log in page invalid email/no password  
+
+  ![login2](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/login2.PNG)  
+  
+- Dashboard page  
+
+  ![dash1](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/dash1.PNG)  
+
+- Transaction details  
+
+  ![dash2](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/dash2.PNG)  
+  
+- No transactions  
+
+  ![dash3](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/dash4.PNG)  
+  
+- Exchange Rates list (dashboard scrolled down)  
+
+  ![dash4](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/dash3.PNG) 
+  
+- List of all utility payments  
+
+  ![pay1](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/payment1.PNG)
+  
+  - New utility payment  
+
+  ![pay2](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/payment2.PNG)  
+  
+  - Utility pament checkout  
+  
+  ![pay3](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/payment3.PNG)  
+  
+  - Utility payments list and details  
+  
+  ![pay4](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/payment4.PNG)  
+  
+- Drop down menu  
+
+  ![ddmenu](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/sedemenu.PNG)  
+  
+- Help section  
+
+  ![help](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/help.PNG)
+  
+
 # Project details
 ## Logical structure
 From a logical point of view, the system has a 3-tiered REST application architecture. It is a modular client-server architecture that consists of a presentation tier, an application tier and a data tier.
