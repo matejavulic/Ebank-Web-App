@@ -42,7 +42,7 @@ This is a web application for online banking with all essential features. It all
 
   ![pay2](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/payment2.PNG)  
   
- - Utility pament checkout  
+ - Utility payment checkout  
   
   ![pay3](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/payment3.PNG)  
   
