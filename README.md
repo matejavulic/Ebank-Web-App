@@ -300,9 +300,9 @@ In order to run a Django server, do the following:
 #Further development
 
 ## Front-end
-  - Adding user abbility to get an graphical report on statistics of its bank account with [plotly](https://plot.ly/) 
+  - Adding user ability to get an graphical report on a statistics of its bank account with [plotly](https://plot.ly/). 
 ## Back-end  
   - Adding two new types if web app authentication:  
     - Mobile device token
-    - Fingerptint biometric authentication
+    - Fingerprint biometric authentication
     - QR code payments
