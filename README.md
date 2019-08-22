@@ -120,9 +120,10 @@ Server is capable of executing following tasks:
  
 ### Django server
 This server has two implemented API services:
- - Dummy data service  
-   When a new user signs up, this service sends random JSON object to Node.js sever upon request. JSON object contains random data (mobile phone number, branch name, and home address) pulled out of .csv file (or as a random number in case of phone number) on Django server. After data receiving, Node.js server updates corrensponing user data in MongoDB with the data provided.
- - Exchange rates service  
+ - **Dummy data service**  
+   When a new user signs up, this service sends random JSON object to Node.js sever upon request. JSON object contains random data (mobile phone number, branch name, and home address) pulled out of .csv file (or as a random number in case of phone number) on Django server. After data receiving, Node.js server updates corrensponing user data in MongoDB with the data provided.  
+   
+ - **Exchange rates service**  
     This service sends API calls to the free [Exchange rates API](https://api.exchangeratesapi.io/), formats retreived data and sends it back to the Node.js server.  
  
 ## Data tier
@@ -132,14 +133,14 @@ Database holds data related to a user account and user transactios. User transac
  ![mongoDB](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/mongodb.png)
 
 ### MySQL database
-- Testing database
+- **Testing database**  
   At the moment, this database is used only for testing purposes. It has 4 tables and it is also connected with MongoDB through foreign   key field clientID. 
   ![mySql](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/mysql1.png)  
 
-- Real-world database
+- **Real-world database (work in progress)**  
   This databse has been developed according to the several international standards used in an IT banking systems:  
   
-  - ISO 20022 Financial Services - Universal financial industry message scheme  
+  - **ISO 20022 Financial Services - Universal financial industry message scheme**  
     As a result of guidelines and schemes presented in this standard, following tables were modeled:  
     
     ![transactionCode](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactnCode.PNG)  
@@ -177,25 +178,29 @@ Database holds data related to a user account and user transactios. User transac
     
     ![queryRes](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionCodes.PNG)  
     
-  - BAI2 codes  
+  - **BAI2 codes**  
     ISO 20022 suggests using the BAI code appended to the transaction code. So, the following table is created, and together with
     transaction code table uniquely identifies transaction type:  
     
     ![transactionType](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionType.PNG)  
     
-  - ISO 18245:2003 Retail financial services - Merchant category codes (MCC)  
-    This standard was used for the merchant category table modeling. This table stores MCC codes upon wich all electronic payments (with card) are standardized and categorized.  
+  - **ISO 18245:2003 Retail financial services** - Merchant category codes (MCC)  
+    This standard was used for the merchant category table modeling. This table stores MCC codes upon wich all electronic payments (card payments) are standardized and categorized.  
     
      ![mcc](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/Merchant.PNG)  
      
-   - ISO 3166-1 alpha-3 - Three-letter country codes   
+   - **ISO 3166-1 alpha-3** - Three-letter country codes   
    
       ![alpha3](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/Country%20code.PNG)  
       
-   - ISO 4217 - This standard delineates currency designators, country codes (alpha and numeric), and references to minor units.
+   - **ISO 4217** - Currency designators  
+     This standard delineates currency designators, country codes (alpha and numeric), and references to minor units.
      It was used for the creation of currency codes table.
    
-      ![alpha3](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/Currency.PNG)
+      ![alpha3](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/Currency.PNG)  
+
+Complete EER diagram of the database can be seen [here](https://github.com/matejavulic/Ebank-Web-App/blob/master/pdfs/EER_diagram_database.pdf).
+
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
 
