@@ -183,8 +183,10 @@ Database holds data related to a user account and user transactios. User transac
     
     ![transactionType](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/transactionType.PNG)  
     
-  - ISO 18245:2003 Retail financial services - Merchant category codes (MCC)
-    This standard was used for modelinh the merchant category table. This table stores MCC codes upon wich all electronic payments (with card) are standardized and categorized by asset 
+  - ISO 18245:2003 Retail financial services - Merchant category codes (MCC)  
+    This standard was used for the merchant category table modeling. This table stores MCC codes upon wich all electronic payments (with card) are standardized and categorized.  
+    
+     ![mcc](https://raw.githubusercontent.com/matejavulic/Ebank-Web-App/master/pictures/Merchant.PNG) 
  
 # Build
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/`directory. Use the `--prod` flag for a production build. 
